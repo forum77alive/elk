@@ -1,0 +1,15 @@
+cluster.name: "elk"
+network.host: 0.0.0.0
+
+#path.data: /var/lib/elasticsearch
+#path.logs: /var/log/elasticsearch
+
+#xpack.security.enabled: true
+#xpack.security.authc.api_key.enabled: true
+
+discovery.type: single-node
+#node.ingest: true
+
+xpack.license.self_generated.type: trial
+xpack.security.enabled: true
+xpack.monitoring.collection.enabled: true
