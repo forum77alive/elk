@@ -3,12 +3,12 @@ services:
     image: elasticsearch:7.17.21
     container_name: elasticsearch
     environment:
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
       - ELASTIC_PASSWORD=pass
     ports:
       - "9200:9200"
       - "9300:9300"
     volumes:
-      - ./elasticsearch/data:/usr/share/elasticsearch/data
       - ./elasticsearch/configs/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
 
   logstash:
